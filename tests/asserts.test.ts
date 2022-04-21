@@ -2,7 +2,7 @@ import "mocha";
 import { expect } from "chai";
 import { importObject } from "./import-object.test";
 import {run, typeCheck} from "./helpers.test";
-
+import { fail } from 'assert'
 
 
 // Clear the output before every test
@@ -26,10 +26,13 @@ export function assertPrint(name: string, source: string, expected: Array<string
 
 // Assert an error gets thrown at runtime
 export function assertFail(name: string, source: string) {
-  it(name, async() => {
-    expect(function() {
-      run(source);
-    }).to.throw('RUNTIME ERROR:');
+  it(name, async () => {
+    try {
+      await run(source);
+      fail("Expected an exception");
+    } catch (err) {
+      expect(err.message).to.contain("RUNTIME ERROR:");
+    }
   });
 }
 
