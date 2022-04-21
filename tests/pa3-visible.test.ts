@@ -1,5 +1,5 @@
-import { NUM, CLASS, NONE } from "../utils";
 import { assertPrint, assertFail, assertTCFail, assertTC } from "./asserts.test";
+import { NUM, BOOL, NONE, CLASS } from "./helpers.test"
 
 describe("PA3 visible tests", () => {
   // 1

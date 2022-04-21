@@ -1,7 +1,5 @@
 import "mocha";
 import { expect } from "chai";
-import { BasicREPL } from "../repl";
-import { Value } from "../ast";
 import { importObject } from "./import-object.test";
 import {run, typeCheck} from "./helpers.test";
 
