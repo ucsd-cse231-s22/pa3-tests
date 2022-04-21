@@ -10,13 +10,13 @@ Once you've done that, take a moment to familiarize yourself with the contents o
 ## Contents of `tests` folder
 
 ### `pa3-visible.test.ts`
-**Do not include this file when submitting**
+**The autograder will overwrite this file**
 
 We are making some of the tests that our autograder runs on your submission visible for you. Use these as an example of how to write tests, but **passing these tests does not mean your implementation is complete.** Make sure to write plenty of other tests.
 
 
 ### `asserts.test.ts`
-**Do not include this file when submitting**
+**The autograder will overwrite this file**
 
 This file contains the assert functions we use for testing. You **should not change any definitions in this file** since we won't be using any version you upload. The `pa3-visible` tests file should provide good example of how to use the `assert` functions defined here. We use for different functions for testing your implementation:
 * `assertPrint`: This function runs a program (which calls `print`) and compares the output of printing to the expected output.
@@ -25,7 +25,7 @@ This file contains the assert functions we use for testing. You **should not cha
 * `assertTCFail`: This function type-checks a program and asserts that it fails at type-checking, raising an exception starting with `TYPE ERROR:`
 
 ### `import-object.test.ts`
-**Do not include this file when submitting**
+**The autograder will overwrite this file**
 
 This is the import object defined for the purpose of testing. It's almost identical to the import object you find in `webStart`, but printing here adds to a string buffer instead of outputting to stdout. You also **should not change any definitions in this file.**
 
