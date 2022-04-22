@@ -30,18 +30,24 @@ This file contains the assert functions we use for testing. You **should not cha
 This is the import object defined for the purpose of testing. It's almost identical to the import object you find in `webStart`, but printing here adds to a string buffer instead of outputting to stdout. You also **should not change any definitions in this file.**
 
 ### `helpers.test.ts`
+
 **You must include this file when submitting**
 
 This is the only file where you will need to make changes to get the tests to run on your compiler. Make sure to fill out the defintions in this file according to your implementation. You will need to change:
 * `function typeCheck(source: string) : Type` (Type-check a program)
 * `async function run(source: string)` (Run a program)
-* `NUM : Type` (A type representing numbers in your AST)
-* `BOOL : Type` (A type representing booleans in your AST)
-* `NONE : Type` (A type representing None in your AST)
-* `function Class(name: string) : Type` (A type representing a class in your AST)
+
+Note that you can use any definition of types, ast, etc that you like in your
+program. You just have to convert to our definition of `Type` for testing.
+
+For the purposes of testing, remember that the type of a program is the type of
+its last expression statement (or "none" if the last statement isn't an
+expression).
 
 ## Running Tests
-In order to run tests, make sure to fill out the definitions above. After you've completed that task, you should be able to run our tests (and any additional tests you write) using the command: 
+You should be able to run our tests (and any additional tests you write) using the command: 
 ```
 npm test
 ```
+
+The sample `package.json` provided here has a test command that's the same as we used for the recommended starter code for PA2; you can probably just re-use the same one as for PA2, but we provide this for reference. (Also, if you just check out this repository and run `npm install` then `npm test`, you can see what test output looks like).
