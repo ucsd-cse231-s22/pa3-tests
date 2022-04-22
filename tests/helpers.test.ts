@@ -1,19 +1,24 @@
-import { Type } from "../ast";
 import { importObject } from "./import-object.test";
 
+// Modify typeCheck to return a `Type` as we have specified below
 export function typeCheck(source: string) : Type {
-  // ... fill this definition as needed
-
+  return "none";
 }
 
+// Modify run to use `importObject` (imported above) to use for printing
 export async function run(source: string) {
-  // ... fill this definition as needed
-
+  return;
 }
 
-export const NUM : Type = // ... fill this definition as needed
-export const BOOL : Type = // ... fill this definition as needed
-export const NONE : Type = // ... fill this definition as needed
+type Type =
+  | "int"
+  | "bool"
+  | "none"
+  | { tag: "object", class: string }
+
+export const NUM : Type = "int";
+export const BOOL : Type = "bool";
+export const NONE : Type = "none";
 export function CLASS(name : string) : Type { 
-  // ... fill this definition as needed
+  return { tag: "object", class: name }
 };
