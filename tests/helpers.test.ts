@@ -6,6 +6,9 @@ export function typeCheck(source: string) : Type {
 }
 
 // Modify run to use `importObject` (imported above) to use for printing
+// You can modify `importObject` to have any new fields you need here, or
+// within another function in your compiler, for example if you need other
+// JavaScript-side helpers
 export async function run(source: string) {
   return;
 }
