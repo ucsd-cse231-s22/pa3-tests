@@ -7,7 +7,7 @@ function stringify(typ: Type, arg: any): string {
       return (arg as number).toString();
     case Type.Bool:
       return (arg as boolean) ? "True" : "False";
-    case Type.Bool:
+    case Type.None:
       return "None";
   }
 }
